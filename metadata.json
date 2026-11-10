@@ -1,0 +1,6 @@
+{
+  "name": "宁波市徐州商会",
+  "description": "宁波市徐州商会跨端微信小程序与PC端数据大屏响应式平台（基于React + Taro架构），涵盖商会首页、会员架构、会员名录、会员企业、商会资讯、党建专题、个人中心及数据大屏。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

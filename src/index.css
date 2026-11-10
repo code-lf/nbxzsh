@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    --font-serif: 'Noto Serif SC', 'Songti SC', 'STSong', serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #EEF3FA;
+    color: #1E293B;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+.font-mono-num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+/* Shimmer animation for Weak Network Skeleton Loading */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton-box {
+  background: linear-gradient(
+    90deg,
+    rgba(226, 232, 240, 0.7) 25%,
+    rgba(241, 245, 249, 0.95) 50%,
+    rgba(226, 232, 240, 0.7) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s infinite ease-in-out;
+}
+
+/* Hide scrollbars for horizontal filter strips while keeping scrollability */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
