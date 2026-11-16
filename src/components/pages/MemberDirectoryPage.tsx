@@ -105,8 +105,8 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
       </CommonHeader>
 
       <View className="px-3 -mt-2 relative z-20 flex flex-col gap-2.5">
-        {/* Row 1: Role Filter */}
-        <View className="grid grid-cols-5 gap-1.5">
+        {/* Row 1: Role Filter (Scrollable pills so counts never truncate on 375px screens) */}
+        <View className="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5">
           {roleTabs.map((tab) => {
             const active = selectedRole === tab.key;
             return (
@@ -114,7 +114,7 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
                 key={tab.key}
                 type="button"
                 onClick={() => setSelectedRole(tab.key)}
-                className={`py-2 px-1 rounded-full text-[11.5px] font-medium transition whitespace-nowrap truncate ${
+                className={`py-1.5 px-3 rounded-full text-[11.5px] font-medium transition whitespace-nowrap shrink-0 ${
                   active
                     ? 'bg-[#154A96] text-white shadow-xs font-semibold'
                     : 'bg-white/85 text-slate-700 hover:bg-white'
@@ -211,7 +211,7 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
           </button>
         </View>
 
-        {/* Member Cards List */}
+        {/* Member Cards List - Optimized horizontal allocation */}
         <View className="flex flex-col gap-2.5">
           {filteredMembers.map((member, index) => (
             <motion.div
@@ -220,10 +220,10 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.18, delay: index * 0.03 }}
               onClick={() => onSelectMember(member)}
-              className="bg-white rounded-2xl p-3 shadow-[0_2px_12px_rgba(15,41,82,0.04)] border border-white hover:border-blue-200 transition flex items-center gap-3 cursor-pointer group"
+              className="bg-white rounded-2xl p-2.5 shadow-[0_2px_12px_rgba(15,41,82,0.04)] border border-white hover:border-blue-200 transition flex items-center gap-2.5 cursor-pointer group"
             >
               {/* Left Portrait */}
-              <View className="w-[74px] h-[66px] sm:w-[84px] sm:h-[72px] rounded-xl overflow-hidden shrink-0 bg-slate-200">
+              <View className="w-[68px] h-[66px] rounded-xl overflow-hidden shrink-0 bg-slate-200">
                 <Image
                   src={member.avatar}
                   alt={member.name}
@@ -233,28 +233,28 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
 
               {/* Middle Name, Role, Company, Tags */}
               <View className="flex-1 min-w-0">
-                <View className="flex items-center gap-2">
-                  <Text className="text-[15.5px] font-bold text-slate-900">
+                <View className="flex items-center gap-1.5">
+                  <Text className="text-[15px] font-bold text-slate-900 whitespace-nowrap">
                     {member.name}
                   </Text>
                   {member.chamberRole === '会长' ? (
-                    <span className="px-2 py-0.5 rounded-md bg-[#FDF1D6] text-[#9A6418] text-[10.5px] font-semibold flex items-center gap-1">
-                      <Crown className="w-3 h-3 text-[#D99B43] fill-[#EAB664]" />
+                    <span className="px-1.5 py-0.5 rounded bg-[#FDF1D6] text-[#9A6418] text-[10px] font-semibold flex items-center gap-0.5 whitespace-nowrap shrink-0">
+                      <Crown className="w-2.5 h-2.5 text-[#D99B43] fill-[#EAB664]" />
                       会长
                     </span>
                   ) : (
-                    <span className="px-2.5 py-0.5 rounded-md bg-[#E6F0FD] text-[#1D54A6] text-[10.5px] font-semibold">
+                    <span className="px-2 py-0.5 rounded bg-[#E6F0FD] text-[#1D54A6] text-[10px] font-semibold whitespace-nowrap shrink-0">
                       {member.chamberRole}
                     </span>
                   )}
                 </View>
 
-                <Text className="mt-1 block text-[12px] text-slate-600 truncate">
-                  {member.company} &nbsp; {member.position}
+                <Text className="mt-1 block text-[11.5px] text-slate-600 truncate">
+                  {member.company} · {member.position}
                 </Text>
 
-                <View className="mt-1.5 flex items-center gap-1.5 flex-wrap">
-                  <span className="px-2 py-0.5 rounded-md bg-[#EDF4FE] text-[#23589C] text-[10px] font-medium flex items-center gap-1">
+                <View className="mt-1.5 flex items-center gap-1.5 flex-nowrap">
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF4FE] text-[#23589C] text-[9.5px] font-medium flex items-center gap-0.5 whitespace-nowrap shrink-0">
                     {member.iconType === 'people' ? (
                       <Users className="w-2.5 h-2.5" />
                     ) : (
@@ -262,31 +262,32 @@ export const MemberDirectoryPage: React.FC<MemberDirectoryPageProps> = ({
                     )}
                     {member.industry}
                   </span>
-                  <span className="px-2 py-0.5 rounded-md bg-[#EDF4FE] text-[#23589C] text-[10px] font-medium flex items-center gap-0.5">
+                  <span className="px-1.5 py-0.5 rounded bg-[#EDF4FE] text-[#23589C] text-[9.5px] font-medium flex items-center gap-0.5 whitespace-nowrap shrink-0">
                     <MapPin className="w-2.5 h-2.5" />
                     {member.city}
                   </span>
                 </View>
               </View>
 
-              {/* Quote Column */}
-              <View className="hidden xs:flex sm:flex items-start gap-1.5 pl-2.5 border-l border-slate-100 w-[135px] sm:w-[155px] shrink-0">
-                <Text className="text-xl font-serif text-slate-300 leading-none">
-                  “
-                </Text>
-                <Text className="text-[10.5px] text-[#3B557E] leading-[1.38] whitespace-pre-line line-clamp-3">
-                  {member.quote}
-                </Text>
-              </View>
+              {/* Right Column: Quote + Action Button */}
+              <View className="flex items-center gap-2 pl-2 border-l border-slate-100 shrink-0">
+                <View className="hidden sm:flex items-start gap-1 w-[112px]">
+                  <Text className="text-base font-serif text-slate-300 leading-none">
+                    “
+                  </Text>
+                  <Text className="text-[10px] text-[#3B557E] leading-[1.35] line-clamp-3">
+                    {member.quote.replace(/\n/g, '')}
+                  </Text>
+                </View>
 
-              {/* Right Button */}
-              <button
-                type="button"
-                className="px-2.5 py-1.5 rounded-full border border-blue-200/80 bg-[#F8FBFF] text-[#154A96] text-[11px] font-medium flex items-center gap-0.5 group-hover:bg-[#154A96] group-hover:text-white transition whitespace-nowrap shrink-0"
-              >
-                <Text>查看资料</Text>
-                <ChevronRight className="w-3 h-3" />
-              </button>
+                <button
+                  type="button"
+                  className="px-2.5 py-1.5 rounded-full border border-blue-200/80 bg-[#F8FBFF] text-[#154A96] text-[10.5px] font-medium flex items-center gap-0.5 group-hover:bg-[#154A96] group-hover:text-white transition whitespace-nowrap shrink-0"
+                >
+                  <Text>查看资料</Text>
+                  <ChevronRight className="w-3 h-3" />
+                </button>
+              </View>
             </motion.div>
           ))}
         </View>

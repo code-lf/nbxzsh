@@ -3,7 +3,20 @@ import { Wifi } from 'lucide-react';
 import { View, Text } from '../taro';
 
 interface SkeletonWrapperProps {
-  pageType: 'home' | 'enterprises' | 'news' | 'profile' | 'directory' | 'org' | 'party' | 'bigscreen';
+  pageType:
+    | 'home'
+    | 'enterprises'
+    | 'featured-enterprises'
+    | 'news'
+    | 'activities'
+    | 'activity-detail'
+    | 'profile'
+    | 'membership-tiers'
+    | 'notifications'
+    | 'directory'
+    | 'org'
+    | 'party'
+    | 'bigscreen';
   weakNetworkSimulated?: boolean;
 }
 

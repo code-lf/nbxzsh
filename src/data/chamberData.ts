@@ -216,6 +216,48 @@ export const ENTERPRISES_DATA: EnterpriseItem[] = [
     address: '江苏省徐州市云龙区维维大道300号',
     contactPhone: '0516-8339 8888',
   },
+  {
+    id: 'xcmg-nb',
+    shortName: '徐工宁波',
+    fullName: '徐工集团工程机械宁波有限公司',
+    roleBadge: '副会长单位',
+    city: '宁波市',
+    industryCategory: '制造业',
+    tags: ['工程机械', '港口装备', '智能制造'],
+    shortDesc: '高端港口与工程机械华东智造中心',
+    homeDesc: '高端港口与工程机械华东智造与服务基地，服务宁波舟山港建设。',
+    fullDesc: '徐工集团工程机械宁波有限公司深度依托宁波舟山港全球第一大港区位优势与徐州工程机械之都产业底座，提供智能港口起重机、新能源矿用机械及全生命周期维保服务。',
+    buildingImg: ASSETS.buildingGeely,
+    bannerImg: ASSETS.bannerGeely,
+    logoText: 'XCMG',
+    logoColor: 'blue',
+    score: 97.1,
+    founded: '2016年',
+    employees: '1,200+人',
+    address: '浙江省宁波市北仑区梅山保税港区港城路18号',
+    contactPhone: '0574-8600 6688',
+  },
+  {
+    id: 'yongxu-tech',
+    shortName: '甬徐数科',
+    fullName: '宁波甬徐数字科技有限公司',
+    roleBadge: '理事单位',
+    city: '宁波市',
+    industryCategory: '数字科技',
+    tags: ['数字科技', '工业互联', '智慧园区'],
+    shortDesc: '工业互联网与智慧园区数字化服务商',
+    homeDesc: '专注长三角制造业数字化转型与工业互联网平台研发。',
+    fullDesc: '宁波甬徐数字科技有限公司由徐州籍留甬科技人才创办，聚焦汽车零部件、精密模具及化工园区物联网监测与数字孪生系统建设，已服务120余家甬徐两地制造企业。',
+    buildingImg: ASSETS.buildingAux,
+    bannerImg: ASSETS.bannerAux,
+    logoText: 'YXTECH',
+    logoColor: 'blue',
+    score: 90.4,
+    founded: '2020年',
+    employees: '320+人',
+    address: '浙江省宁波市高新区研发园B区5号楼',
+    contactPhone: '0574-8791 2200',
+  },
 ];
 
 export interface MemberItem {
@@ -379,6 +421,7 @@ export interface NewsArticleItem {
   homeThumb?: string;
   views: number;
   location?: string;
+  isFocus?: boolean;
   contentParagraphs: string[];
 }
 
@@ -394,6 +437,7 @@ export const NEWS_DATA: NewsArticleItem[] = [
     homeThumb: ASSETS.news1Conf,
     views: 2680,
     location: '宁波泛太平洋大酒店 · 三楼大宴会厅',
+    isFocus: true,
     contentParagraphs: [
       '2024年12月18日，宁波市徐州商会2024年会员大会暨迎新交流会在宁波泛太平洋大酒店三楼大宴会厅隆重举行。来自宁波、徐州两地的相关部门领导、兄弟商会代表及本会全体会员共260余人欢聚一堂，共叙彭城乡情，共谋甬徐高质量发展新篇章。',
       '会上，会长张建国作宁波市徐州商会2024年度工作报告，全面回顾了商会在党建引领、政企对接、甬徐双城招商引资、会员企业走访服务及社会公益帮扶等方面取得的丰硕成果。2024年商会累计促成甬徐两地产业项目对接48项，组织各类专题活动18场。',
@@ -408,11 +452,12 @@ export const NEWS_DATA: NewsArticleItem[] = [
     date: '2024-11-26',
     category: '商会活动',
     partySubCategory: '党史学习',
-    tagBadge: '党史学习',
+    tagBadge: '产业对接',
     thumb: ASSETS.news2Visit,
     homeThumb: ASSETS.homeNews2,
     views: 1845,
     location: '徐州经济技术开发区 · 淮海国际陆港',
+    isFocus: true,
     contentParagraphs: [
       '为积极响应长三角一体化发展战略，推动宁波与徐州两地产业优势互补，11月26日，宁波市徐州商会考察团一行28位企业家赴徐州经济技术开发区、淮海国际陆港开展为期三天的投资考察与产业对接活动。',
       '考察团先后走访了徐工集团高端工程机械智能制造基地、徐州综保区及现代物流枢纽，并与徐州市工商联、投资促进局举行专题座谈会，现场达成多项智能装备与跨境供应链合作意向。',
@@ -452,6 +497,293 @@ export const NEWS_DATA: NewsArticleItem[] = [
       '金秋十月，宁波市徐州商会迎来重磅新成员——吉利汽车集团有限公司正式加入宁波市徐州商会并担任副会长单位。',
       '吉利汽车集团作为全球领先的智能出行科技企业，在汽车整车制造、新能源三电系统及智能网联领域拥有深厚技术积淀。此次加入商会将有力带动商会高端制造专委会与上下游零部件会员企业的协同创新。',
     ],
+  },
+  {
+    id: 'yongxu-supply-chain-salon',
+    title: '“智造出海·链动双城”甬徐高端装备供应链对接会成功举办',
+    shortSummary: '促进会员企业上下游订单直采与出海物流协同降本。',
+    fullSummary: '40余家宁波与徐州籍智能制造、汽配及物流企业在北仑自贸区开展面对面供需洽谈，现场签署采购合作备忘录12项。',
+    date: '2024-10-15',
+    category: '商会活动',
+    tagBadge: '商会活动',
+    thumb: ASSETS.buildingFesc,
+    homeThumb: ASSETS.buildingFesc,
+    views: 1530,
+    location: '宁波北仑自贸试验区展示中心',
+    contentParagraphs: [
+      '10月15日下午，由宁波市徐州商会智能制造专业委员会主办的“智造出海·链动双城”高端装备供应链对接会在北仑区成功举行。',
+      '来自徐工机械配套企业、吉利供应链及宁波港口物流会员企业负责人围绕高精度液压件加工、新能源电驱壳体、宁波舟山港绿色航运专线展开深度洽谈，切实帮助会员企业拓展市场、降本增效。',
+    ],
+  },
+  {
+    id: 'chamber-law-clinic-2024',
+    title: '商会权益保障专委会开展民营企业合规与知识产权专题讲座',
+    shortSummary: '护航会员企业稳健经营，筑牢涉外贸易合规防线。',
+    fullSummary: '特邀资深涉外商事律师为会员企业解读《公司法》新规、劳动用工风控与跨境贸易知识产权保护实务。',
+    date: '2024-09-28',
+    category: '最新资讯',
+    tagBadge: '企业服务',
+    thumb: ASSETS.buildingAux,
+    homeThumb: ASSETS.buildingAux,
+    views: 1192,
+    location: '宁波市鄞州区商会会议中心',
+    contentParagraphs: [
+      '为持续优化会员企业法治化营商能力，宁波市徐州商会权益保障部举办民营企业合规经营与知识产权保护公益专题讲座，吸引60余位企业负责人及法务主管现场聆听。',
+      '商会常年法律顾问团队现场为会员企业提供“一对一”合同体检与股权架构咨询服务，并开通会员企业法律援助绿色通道。',
+    ],
+  },
+  {
+    id: 'youth-xushang-forum',
+    title: '新生代徐商传承创新沙龙在鄞州南部商务区举行',
+    shortSummary: '青年徐商接力传承，探讨AI赋能与数字化工厂升级路径。',
+    fullSummary: '20余位在甬青年徐商创业者围绕AI大模型应用、工业数字化转型与品牌出海分享一线实践经验。',
+    date: '2024-09-10',
+    category: '商会活动',
+    tagBadge: '青年沙龙',
+    thumb: ASSETS.buildingSuning,
+    homeThumb: ASSETS.buildingSuning,
+    views: 1410,
+    location: '宁波鄞州南部商务区水街',
+    contentParagraphs: [
+      '青年兴则商会兴。9月10日，宁波市徐州商会青年委员会组织新生代企业家走进奥克斯及甬徐数科园区，实地观摩黑灯工厂与MES数字化产线。',
+      '与会青年企业家表示，将在前辈扎实创业的基础上，以数字化与国际化视野推动传统制造企业焕新升级。',
+    ],
+  },
+];
+
+export interface ActivityItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  date: string;
+  timeRange: string;
+  location: string;
+  address: string;
+  status: '报名中' | '即将开始' | '已结束';
+  capacity: number;
+  registeredCount: number;
+  organizer: string;
+  feeText: string;
+  poster: string;
+  highlights: string[];
+  agenda: { time: string; topic: string }[];
+}
+
+export const ACTIVITIES_DATA: ActivityItem[] = [
+  {
+    id: 'gala-2025',
+    title: '宁波市徐州商会2025年新春联谊会',
+    subtitle: '传承汉风 · 同心同行 · 共迎未来',
+    date: '2025-01-10 (周五)',
+    timeRange: '18:00-21:00',
+    location: '宁波香格里拉大酒店 · 四楼宴会厅',
+    address: '浙江省宁波市鄞州区豫源街88号',
+    status: '报名中',
+    capacity: 200,
+    registeredCount: 156,
+    organizer: '宁波市徐州商会秘书处',
+    feeText: '会员企业免费参会（每企限2席）',
+    poster: ASSETS.event2025Gala,
+    highlights: [
+      '两汉文化汉服鼓乐迎宾与“千年彭城”非遗微展',
+      '2024年度优秀徐商企业、突出贡献副会长颁奖盛典',
+      '甬徐两地2025重点招商引资及金融授信签约仪式',
+      '乡音联欢晚宴与徐州特色名品伴手礼互动抽奖',
+    ],
+    agenda: [
+      { time: '17:30 - 18:10', topic: '嘉宾签到、合影留念及商会年度成果展巡礼' },
+      { time: '18:10 - 18:45', topic: '张建国会长新年致辞暨年度优秀会员单位表彰' },
+      { time: '18:45 - 19:15', topic: '甬徐双城产业投资签约与银行百亿授信启动' },
+      { time: '19:15 - 21:00', topic: '新春团圆晚宴、文艺汇演与自由商务交流' },
+    ],
+  },
+  {
+    id: 'xuzhou-invest-summit',
+    title: '2025甬徐双城智能制造招商推介峰会',
+    subtitle: '精准招商 · 链主赋能 · 项目落地',
+    date: '2025-02-18 (周二)',
+    timeRange: '14:00-17:30',
+    location: '宁波泛太平洋大酒店 · 二楼牡丹厅',
+    address: '浙江省宁波市鄞州区民安东路99号',
+    status: '报名中',
+    capacity: 120,
+    registeredCount: 84,
+    organizer: '宁波市徐州商会投资促进专委会',
+    feeText: '会员单位免费 · 特邀嘉宾定向席位',
+    poster: ASSETS.news2Visit,
+    highlights: [
+      '徐州经开区、高新区最新制造业返乡投资政策权威解读',
+      '宁波汽车零部件与新能源储能产业联合采购清单发布',
+      '政企闭门圆桌面对面选址与税收奖补答疑',
+    ],
+    agenda: [
+      { time: '13:30 - 14:00', topic: '参会企业签到与投资需求手册领取' },
+      { time: '14:00 - 15:10', topic: '徐州市及各县区重点产业园区招商政策推介' },
+      { time: '15:10 - 16:30', topic: '链主企业需求路演与拟落地项目分组洽谈' },
+      { time: '16:30 - 17:30', topic: '意向项目签约仪式与自由交流' },
+    ],
+  },
+  {
+    id: 'geely-study-tour',
+    title: '名企研学行 | 走进吉利汽车杭州湾智造基地',
+    subtitle: '探访标杆工厂 · 对话精益智造',
+    date: '2025-03-06 (周四)',
+    timeRange: '09:30-16:00',
+    location: '吉利汽车杭州湾新区研究院及总装工厂',
+    address: '浙江省宁波市杭州湾新区滨海二路818号',
+    status: '即将开始',
+    capacity: 50,
+    registeredCount: 42,
+    organizer: '宁波市徐州商会智能制造专委会',
+    feeText: '会员企业高管免费（限50名）',
+    poster: ASSETS.buildingGeely,
+    highlights: [
+      '零距离观摩高度自动化焊装及新能源整车智造产线',
+      '吉利产业供应链准入标准与国产替代合作深度研讨',
+      '陈志强副会长带队分享汽车产业链协同经验',
+    ],
+    agenda: [
+      { time: '09:30 - 11:00', topic: '走进吉利智能制造产线与研发实验室参观' },
+      { time: '11:00 - 12:00', topic: '精益生产管理与供应链协同专题交流' },
+      { time: '13:30 - 16:00', topic: '会员企业配套产品自荐与技术对接座谈' },
+    ],
+  },
+  {
+    id: 'annual-2024-review',
+    title: '宁波市徐州商会2024年会员大会暨迎新交流会',
+    subtitle: '凝聚徐商力量 · 共话高质量发展新机遇',
+    date: '2024-12-18 (周三)',
+    timeRange: '15:00-20:30',
+    location: '宁波泛太平洋大酒店 · 三楼大宴会厅',
+    address: '浙江省宁波市鄞州区民安东路99号',
+    status: '已结束',
+    capacity: 260,
+    registeredCount: 260,
+    organizer: '宁波市徐州商会秘书处',
+    feeText: '已圆满落幕',
+    poster: ASSETS.news1Conf,
+    highlights: [
+      '260余位两地政企领导与会员代表齐聚一堂',
+      '全年累计促成甬徐双城产业对接项目48项',
+      '发布2025年商会五大数字化服务升级计划',
+    ],
+    agenda: [
+      { time: '15:00 - 17:30', topic: '会员代表大会审议年度工作与财务报告' },
+      { time: '18:00 - 20:30', topic: '迎新联谊晚宴暨优秀会员授牌典礼' },
+    ],
+  },
+];
+
+export interface MembershipTierItem {
+  id: string;
+  roleTitle: string;
+  annualFee: string;
+  quotaText: string;
+  badgeColor: 'gold' | 'blue' | 'indigo' | 'slate';
+  targetAudience: string;
+  benefits: string[];
+}
+
+export const MEMBERSHIP_TIERS_DATA: MembershipTierItem[] = [
+  {
+    id: 'tier-president',
+    roleTitle: '会长单位',
+    annualFee: '¥ 50,000',
+    quotaText: '每届 1 席',
+    badgeColor: 'gold',
+    targetAudience: '在甬徐商领军企业或行业龙头企业董事长',
+    benefits: [
+      '统筹主持宁波市徐州商会理事会与重大决策表决权',
+      '优先出席甬徐两地政府高层政企座谈会与招商引资峰会',
+      '小程序首页与PC数据大屏核心风采置顶展示',
+      '专享商会百亿银行联合授信绿色审批及法务首席顾问团服务',
+    ],
+  },
+  {
+    id: 'tier-vice-president',
+    roleTitle: '副会长单位',
+    annualFee: '¥ 20,000',
+    quotaText: '限额 12 席',
+    badgeColor: 'blue',
+    targetAudience: '规模以上制造业、智能科技、商贸服务骨干企业',
+    benefits: [
+      '担任专委会主任或副主任，牵头组织行业供需对接会',
+      '微信小程序“知名会员企业”首页及风采页优先推荐曝光',
+      '免费参加商会全年高端研学、年会VIP席位及双城考察团',
+      '享有会员企业招商落地、融资担保及应急困难帮扶优先协调权',
+    ],
+  },
+  {
+    id: 'tier-director',
+    roleTitle: '理事单位',
+    annualFee: '¥ 8,000',
+    quotaText: '限额 36 席',
+    badgeColor: 'indigo',
+    targetAudience: '成长型专精特新企业、优质供应链及专业服务机构',
+    benefits: [
+      '享有商会理事会选举权、被选举权与重大事项审议权',
+      '免费在商会通讯录、会员企业列表展示品牌LOGO及主营产品',
+      '免费参与商会法律合规讲座、银企对接及青年沙龙活动',
+      '每年享受2次免费商业咨询与企业用工政策申报辅导',
+    ],
+  },
+  {
+    id: 'tier-member',
+    roleTitle: '普通会员单位',
+    annualFee: '¥ 2,000',
+    quotaText: '开放申请中',
+    badgeColor: 'slate',
+    targetAudience: '在甬创业或发展的徐州籍企业家、高管及商贸实体',
+    benefits: [
+      '颁发宁波市徐州商会正式电子及实体会员铭牌认证',
+      '开放全量268家会员通讯录、企业名录与商机对接通道',
+      '免费参加年度会员大会、新春联谊会及节日乡情联欢活动',
+      '纳入商会困难帮扶与子女教育、医疗协调保障体系',
+    ],
+  },
+];
+
+export interface NotificationItem {
+  id: string;
+  title: string;
+  content: string;
+  time: string;
+  type: '活动通知' | '商会公告' | '服务提醒';
+  unread: boolean;
+}
+
+export const NOTIFICATIONS_DATA: NotificationItem[] = [
+  {
+    id: 'notif-1',
+    title: '2025年新春联谊会席位确认提醒',
+    content: '宁波市徐州商会2025年新春联谊会将于1月10日在香格里拉大酒店举行，请尽快确认参会人数。',
+    time: '10分钟前',
+    type: '活动通知',
+    unread: true,
+  },
+  {
+    id: 'notif-2',
+    title: '关于开展2025年度会费缴纳及会员年审的通知',
+    content: '各副会长、理事及会员单位可前往“个人中心 - 会员会费与权益”核对最新年度会费标准。',
+    time: '2小时前',
+    type: '商会公告',
+    unread: true,
+  },
+  {
+    id: 'notif-3',
+    title: '吉利汽车集团加入宁波市徐州商会并任副会长单位',
+    content: '欢迎新成员加入商会智造专委会，会员企业可通过“招商服务”提交上下游配套需求。',
+    time: '昨天 16:40',
+    type: '商会公告',
+    unread: true,
+  },
+  {
+    id: 'notif-4',
+    title: '甬徐双城招商引资项目库第4批清单已更新',
+    content: '新增徐州经开区与北仑保税区12项装备制造协同招商需求，欢迎查阅对接。',
+    time: '3天前',
+    type: '服务提醒',
+    unread: false,
   },
 ];
 

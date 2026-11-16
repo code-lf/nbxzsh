@@ -134,11 +134,16 @@ export const TARO_APP_CONFIG = {
   pages: [
     'pages/index/index',
     'pages/enterprises/index',
+    'pages/featured-enterprises/index',
     'pages/org-structure/index',
     'pages/member-directory/index',
     'pages/news/index',
+    'pages/activities/index',
+    'pages/activity-detail/index',
     'pages/party-building/index',
     'pages/profile/index',
+    'pages/membership-tiers/index',
+    'pages/notifications/index',
     'pages/big-screen/index',
   ],
   window: {

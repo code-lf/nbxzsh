@@ -83,12 +83,12 @@ export const CommonHeader: React.FC<CommonHeaderProps> = ({
 
           {/* Chamber Brand Header + WeChat Capsule */}
           <View className="flex items-center justify-between">
-            <View className="flex items-center gap-2.5">
+            <View className="flex items-center gap-2 min-w-0">
               {showBack && onBack && (
                 <button
                   type="button"
                   onClick={onBack}
-                  className="w-8 h-8 rounded-full bg-white/75 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white active:scale-95 transition mr-0.5 shadow-xs"
+                  className="w-8 h-8 rounded-full bg-white/75 backdrop-blur-sm flex items-center justify-center text-slate-800 hover:bg-white active:scale-95 transition mr-0.5 shadow-xs shrink-0"
                   aria-label="返回上一页"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -96,18 +96,18 @@ export const CommonHeader: React.FC<CommonHeaderProps> = ({
               )}
               <View
                 onClick={onLogoClick}
-                className="flex items-center gap-2.5 cursor-pointer group"
+                className="flex items-center gap-2 cursor-pointer group min-w-0"
               >
                 <Image
                   src={ASSETS.logoEmblem}
                   alt="宁波市徐州商会会徽"
-                  className="w-10 h-10 rounded-full shadow-xs shrink-0 bg-white/80 p-0.5 group-hover:scale-105 transition-transform"
+                  className="w-9 h-9 sm:w-10 sm:h-10 rounded-full shadow-xs shrink-0 bg-white/80 p-0.5 group-hover:scale-105 transition-transform"
                 />
-                <View className="flex flex-col">
-                  <Text className="font-serif-title text-[19px] sm:text-[21px] font-bold tracking-wider text-[#0A2351] leading-tight">
+                <View className="flex flex-col min-w-0">
+                  <Text className="font-serif-title text-[18px] sm:text-[21px] font-bold tracking-wider text-[#0A2351] leading-tight whitespace-nowrap">
                     宁波市徐州商会
                   </Text>
-                  <Text className="text-[8.5px] sm:text-[9px] tracking-[0.14em] text-[#1E3A6D] font-semibold uppercase">
+                  <Text className="text-[7.5px] sm:text-[9px] tracking-[0.08em] sm:tracking-[0.14em] text-[#1E3A6D] font-semibold uppercase whitespace-nowrap truncate">
                     NINGBO XUZHOU CHAMBER OF COMMERCE
                   </Text>
                 </View>

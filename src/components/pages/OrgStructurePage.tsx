@@ -60,21 +60,21 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
           initial={{ opacity: 0, y: 8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2 }}
-          className="bg-white/95 backdrop-blur-md rounded-2xl p-3 shadow-[0_4px_20px_rgba(15,41,82,0.05)] grid grid-cols-4 divide-x divide-slate-100"
+          className="bg-white/95 backdrop-blur-md rounded-2xl p-2 sm:p-3 shadow-[0_4px_20px_rgba(15,41,82,0.05)] grid grid-cols-4 divide-x divide-slate-100"
         >
           <button
             type="button"
             onClick={() => onNavigate('directory', '会长')}
-            className="flex items-center justify-center gap-2 py-1 px-1 hover:bg-blue-50/40 rounded-lg transition"
+            className="flex items-center justify-center gap-1 sm:gap-2 py-1 px-0.5 hover:bg-blue-50/40 rounded-lg transition"
           >
-            <Crown className="w-5 h-5 text-[#D99B43] fill-[#EAB664] shrink-0" />
+            <Crown className="w-4 h-4 sm:w-5 sm:h-5 text-[#D99B43] fill-[#EAB664] shrink-0" />
             <View className="flex flex-col items-start">
-              <Text className="text-[11.5px] font-medium text-slate-600">会长</Text>
+              <Text className="text-[10.5px] sm:text-[11.5px] font-medium text-slate-600 whitespace-nowrap">会长</Text>
               <View className="flex items-baseline gap-0.5">
-                <Text className="font-serif-title text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
+                <Text className="font-serif-title text-[17px] sm:text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
                   1
                 </Text>
-                <Text className="text-[10.5px] text-slate-500">人</Text>
+                <Text className="text-[9.5px] sm:text-[10.5px] text-slate-500">人</Text>
               </View>
             </View>
           </button>
@@ -82,16 +82,16 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('directory', '副会长')}
-            className="flex items-center justify-center gap-2 py-1 px-1 hover:bg-blue-50/40 rounded-lg transition"
+            className="flex items-center justify-center gap-1 sm:gap-2 py-1 px-0.5 hover:bg-blue-50/40 rounded-lg transition"
           >
-            <User className="w-5 h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
+            <User className="w-4 h-4 sm:w-5 sm:h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
             <View className="flex flex-col items-start">
-              <Text className="text-[11.5px] font-medium text-slate-600">副会长</Text>
+              <Text className="text-[10.5px] sm:text-[11.5px] font-medium text-slate-600 whitespace-nowrap">副会长</Text>
               <View className="flex items-baseline gap-0.5">
-                <Text className="font-serif-title text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
+                <Text className="font-serif-title text-[17px] sm:text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
                   12
                 </Text>
-                <Text className="text-[10.5px] text-slate-500">人</Text>
+                <Text className="text-[9.5px] sm:text-[10.5px] text-slate-500">人</Text>
               </View>
             </View>
           </button>
@@ -99,16 +99,16 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('directory', '理事')}
-            className="flex items-center justify-center gap-2 py-1 px-1 hover:bg-blue-50/40 rounded-lg transition"
+            className="flex items-center justify-center gap-1 sm:gap-2 py-1 px-0.5 hover:bg-blue-50/40 rounded-lg transition"
           >
-            <Users className="w-5 h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
+            <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
             <View className="flex flex-col items-start">
-              <Text className="text-[11.5px] font-medium text-slate-600">理事</Text>
+              <Text className="text-[10.5px] sm:text-[11.5px] font-medium text-slate-600 whitespace-nowrap">理事</Text>
               <View className="flex items-baseline gap-0.5">
-                <Text className="font-serif-title text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
+                <Text className="font-serif-title text-[17px] sm:text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
                   36
                 </Text>
-                <Text className="text-[10.5px] text-slate-500">人</Text>
+                <Text className="text-[9.5px] sm:text-[10.5px] text-slate-500">人</Text>
               </View>
             </View>
           </button>
@@ -116,67 +116,69 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
           <button
             type="button"
             onClick={() => onNavigate('directory', '全部')}
-            className="flex items-center justify-center gap-2 py-1 px-1 hover:bg-blue-50/40 rounded-lg transition"
+            className="flex items-center justify-center gap-1 sm:gap-2 py-1 px-0.5 hover:bg-blue-50/40 rounded-lg transition"
           >
-            <Users className="w-5 h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
+            <Users className="w-4 h-4 sm:w-5 sm:h-5 text-[#698BBF] fill-[#8BA9D6] shrink-0" />
             <View className="flex flex-col items-start">
-              <Text className="text-[11.5px] font-medium text-slate-600">会员</Text>
+              <Text className="text-[10.5px] sm:text-[11.5px] font-medium text-slate-600 whitespace-nowrap">会员</Text>
               <View className="flex items-baseline gap-0.5">
-                <Text className="font-serif-title text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
+                <Text className="font-serif-title text-[17px] sm:text-[21px] font-bold text-[#0A2046] tabular-nums leading-none">
                   268
                 </Text>
-                <Text className="text-[10.5px] text-slate-500">人</Text>
+                <Text className="text-[9.5px] sm:text-[10.5px] text-slate-500">人</Text>
               </View>
             </View>
           </button>
         </motion.div>
 
-        {/* 2. Filter & Search Bar */}
-        <View className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setFilterMode('level')}
-            className={`px-3 py-1.5 rounded-full text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap ${
-              filterMode === 'level'
-                ? 'bg-[#154A96] text-white shadow-xs'
-                : 'bg-white/85 text-slate-700'
-            }`}
-          >
-            <Text>按层级</Text>
-            <ChevronDown className="w-3.5 h-3.5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setFilterMode('industry');
-              onNavigate('directory');
-            }}
-            className={`px-3 py-1.5 rounded-full text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap ${
-              filterMode === 'industry'
-                ? 'bg-[#154A96] text-white shadow-xs'
-                : 'bg-white/85 text-slate-700'
-            }`}
-          >
-            <Text>按行业</Text>
-            <ChevronDown className="w-3.5 h-3.5" />
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setFilterMode('region');
-              onNavigate('directory');
-            }}
-            className={`px-3 py-1.5 rounded-full text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap ${
-              filterMode === 'region'
-                ? 'bg-[#154A96] text-white shadow-xs'
-                : 'bg-white/85 text-slate-700'
-            }`}
-          >
-            <Text>按地区</Text>
-            <ChevronDown className="w-3.5 h-3.5" />
-          </button>
+        {/* 2. Filter & Search Bar (Stacks cleanly on narrow mobile so search input stays full-width) */}
+        <View className="flex flex-col sm:flex-row sm:items-center gap-2">
+          <View className="flex items-center gap-1.5 overflow-x-auto no-scrollbar shrink-0">
+            <button
+              type="button"
+              onClick={() => setFilterMode('level')}
+              className={`px-3 py-1.5 rounded-full text-[11.5px] sm:text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap shrink-0 ${
+                filterMode === 'level'
+                  ? 'bg-[#154A96] text-white shadow-xs'
+                  : 'bg-white/85 text-slate-700'
+              }`}
+            >
+              <Text>按层级</Text>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setFilterMode('industry');
+                onNavigate('directory');
+              }}
+              className={`px-3 py-1.5 rounded-full text-[11.5px] sm:text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap shrink-0 ${
+                filterMode === 'industry'
+                  ? 'bg-[#154A96] text-white shadow-xs'
+                  : 'bg-white/85 text-slate-700'
+              }`}
+            >
+              <Text>按行业</Text>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setFilterMode('region');
+                onNavigate('directory');
+              }}
+              className={`px-3 py-1.5 rounded-full text-[11.5px] sm:text-[12px] font-medium flex items-center gap-1 transition whitespace-nowrap shrink-0 ${
+                filterMode === 'region'
+                  ? 'bg-[#154A96] text-white shadow-xs'
+                  : 'bg-white/85 text-slate-700'
+              }`}
+            >
+              <Text>按地区</Text>
+              <ChevronDown className="w-3.5 h-3.5" />
+            </button>
+          </View>
 
-          <View className="flex-1 bg-white/90 rounded-full px-3 py-1.5 flex items-center gap-1.5 border border-white min-w-0">
+          <View className="flex-1 bg-white/95 rounded-full px-3 py-1.5 flex items-center gap-1.5 border border-white min-w-0 shadow-2xs">
             <Search className="w-3.5 h-3.5 text-slate-400 shrink-0" />
             <Input
               type="text"
@@ -188,7 +190,7 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
                 }
               }}
               placeholder="搜索会员姓名、企业名称"
-              className="w-full bg-transparent text-[11.5px] text-slate-700 placeholder:text-slate-400 focus:outline-none min-w-0"
+              className="w-full bg-transparent text-[12px] text-slate-700 placeholder:text-slate-400 focus:outline-none min-w-0"
             />
           </View>
         </View>
@@ -248,46 +250,46 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
             </View>
 
             {/* Level 2: 3 Branches (副会长, 理事, 会员) */}
-            <View className="w-full grid grid-cols-3 gap-2.5 mt-0.5">
+            <View className="w-full grid grid-cols-3 gap-1.5 sm:gap-2.5 mt-0.5">
               <button
                 type="button"
                 onClick={() => onNavigate('directory', '副会长')}
-                className="py-2.5 px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition"
+                className="py-2 px-1.5 sm:py-2.5 sm:px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1 hover:border-blue-300 transition"
               >
-                <User className="w-4 h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
-                <Text className="text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
+                <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
+                <Text className="text-[11.5px] sm:text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
                   副会长
                 </Text>
-                <Text className="text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
-                  (12人)
+                <Text className="text-[10px] sm:text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
+                  (12)
                 </Text>
               </button>
 
               <button
                 type="button"
                 onClick={() => onNavigate('directory', '理事')}
-                className="py-2.5 px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition"
+                className="py-2 px-1.5 sm:py-2.5 sm:px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1 hover:border-blue-300 transition"
               >
-                <Users className="w-4 h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
-                <Text className="text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
+                <Text className="text-[11.5px] sm:text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
                   理事
                 </Text>
-                <Text className="text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
-                  (36人)
+                <Text className="text-[10px] sm:text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
+                  (36)
                 </Text>
               </button>
 
               <button
                 type="button"
                 onClick={() => onNavigate('directory', '会员')}
-                className="py-2.5 px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1.5 hover:border-blue-300 transition"
+                className="py-2 px-1.5 sm:py-2.5 sm:px-2 rounded-xl bg-gradient-to-b from-white to-[#F4F8FE] border border-blue-100 shadow-2xs flex items-center justify-center gap-1 hover:border-blue-300 transition"
               >
-                <Users className="w-4 h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
-                <Text className="text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
+                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#5A81BC] fill-[#7B9FD3] shrink-0" />
+                <Text className="text-[11.5px] sm:text-[13px] font-bold text-[#0D2346] whitespace-nowrap">
                   会员
                 </Text>
-                <Text className="text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
-                  (268人)
+                <Text className="text-[10px] sm:text-[11px] text-slate-500 font-mono-num whitespace-nowrap">
+                  (268)
                 </Text>
               </button>
             </View>
@@ -311,7 +313,7 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
             </View>
 
             {/* Role Tabs */}
-            <View className="flex items-center gap-2 mb-3">
+            <View className="flex items-center gap-1.5 sm:gap-2 mb-3 overflow-x-auto no-scrollbar">
               {[
                 { role: '会长' as const, label: '会长 (1)' },
                 { role: '副会长' as const, label: '副会长 (12)' },
@@ -323,7 +325,7 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
                     key={t.role}
                     type="button"
                     onClick={() => setActiveCoreTab(t.role)}
-                    className={`px-5 py-1.5 rounded-full text-[12px] font-medium transition ${
+                    className={`px-3.5 sm:px-5 py-1.5 rounded-full text-[11.5px] sm:text-[12px] font-medium transition whitespace-nowrap shrink-0 ${
                       active
                         ? 'bg-[#154A96] text-white font-semibold shadow-2xs'
                         : 'bg-[#F2F6FC] text-slate-700 hover:bg-blue-50'
@@ -335,58 +337,62 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
               })}
             </View>
 
-            {/* Featured Member Card (张建国 会长) */}
+            {/* Featured Member Card (Stacks quote cleanly underneath bio on < sm so nothing is squeezed) */}
             <div
               onClick={() => onSelectMember(featuredMember)}
-              className="p-3 rounded-xl border border-slate-100 bg-gradient-to-r from-[#FBFDFF] to-[#F3F8FE] flex items-center gap-3 cursor-pointer hover:border-blue-200 transition group"
+              className="p-2.5 sm:p-3 rounded-xl border border-slate-100 bg-gradient-to-r from-[#FBFDFF] to-[#F3F8FE] flex flex-col sm:flex-row sm:items-center gap-2.5 sm:gap-3 cursor-pointer hover:border-blue-200 transition group"
             >
-              <View className="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-slate-200 shadow-2xs">
-                <Image
-                  src={featuredMember.avatar}
-                  alt={featuredMember.name}
-                  className="w-full h-full object-cover"
-                />
-              </View>
+              <View className="flex items-center gap-2.5 flex-1 min-w-0">
+                <View className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl overflow-hidden shrink-0 bg-slate-200 shadow-2xs">
+                  <Image
+                    src={featuredMember.avatar}
+                    alt={featuredMember.name}
+                    className="w-full h-full object-cover"
+                  />
+                </View>
 
-              <View className="flex-1 min-w-0">
-                <View className="flex items-center gap-2">
-                  <Text className="text-[17px] font-bold text-slate-900">
-                    {featuredMember.name}
+                <View className="flex-1 min-w-0">
+                  <View className="flex items-center gap-1.5 sm:gap-2">
+                    <Text className="text-[15px] sm:text-[16px] font-bold text-slate-900 whitespace-nowrap">
+                      {featuredMember.name}
+                    </Text>
+                    <span className="px-2 py-0.5 rounded-md bg-[#FDF1D6] text-[#9A6418] text-[10px] sm:text-[10.5px] font-semibold flex items-center gap-1 whitespace-nowrap shrink-0">
+                      <Crown className="w-3 h-3 text-[#D99B43] fill-[#EAB664]" />
+                      {featuredMember.chamberRole}
+                    </span>
+                  </View>
+
+                  <Text className="mt-0.5 block text-[11.5px] sm:text-[12px] text-slate-600 truncate">
+                    {featuredMember.company} · {featuredMember.position}
                   </Text>
-                  <span className="px-2 py-0.5 rounded-md bg-[#FDF1D6] text-[#9A6418] text-[11px] font-semibold flex items-center gap-1">
-                    <Crown className="w-3 h-3 text-[#D99B43] fill-[#EAB664]" />
-                    {featuredMember.chamberRole}
-                  </span>
-                </View>
 
-                <Text className="mt-1.5 block text-[12.5px] text-slate-600 truncate">
-                  {featuredMember.company} &nbsp; {featuredMember.position}
-                </Text>
-
-                <View className="mt-2 flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#EBF3FE] text-[#25599C] text-[10.5px] font-medium">
-                    {featuredMember.industry}
-                  </span>
-                  <span className="px-2.5 py-0.5 rounded-full bg-[#EBF3FE] text-[#25599C] text-[10.5px] font-medium">
-                    {featuredMember.city}
-                  </span>
+                  <View className="mt-1 flex items-center gap-1.5 flex-nowrap">
+                    <span className="px-2 py-0.5 rounded-full bg-[#EBF3FE] text-[#25599C] text-[9.5px] sm:text-[10px] font-medium whitespace-nowrap">
+                      {featuredMember.industry}
+                    </span>
+                    <span className="px-2 py-0.5 rounded-full bg-[#EBF3FE] text-[#25599C] text-[9.5px] sm:text-[10px] font-medium whitespace-nowrap">
+                      {featuredMember.city}
+                    </span>
+                  </View>
                 </View>
               </View>
 
-              {/* Vertical Divider + Quote */}
-              <View className="hidden sm:flex items-center gap-2 pl-3 border-l border-slate-200/70 max-w-[180px]">
-                <Text className="text-2xl font-serif text-slate-300 leading-none self-start">
-                  “
-                </Text>
-                <Text className="text-[11.5px] text-[#35527E] leading-[1.45] whitespace-pre-line">
-                  {featuredMember.quote}
-                </Text>
-                <ChevronRight className="w-4 h-4 text-slate-400 shrink-0" />
+              {/* Divider + Quote (Top divider on mobile, Left divider on >= sm) */}
+              <View className="flex items-center justify-between sm:justify-start gap-1.5 pt-2 sm:pt-0 border-t sm:border-t-0 sm:pl-2.5 sm:border-l border-slate-200/70 sm:w-[132px] shrink-0">
+                <View className="flex items-start gap-1 min-w-0">
+                  <Text className="text-base sm:text-lg font-serif text-slate-300 leading-none shrink-0">
+                    “
+                  </Text>
+                  <Text className="text-[10.5px] text-[#35527E] leading-[1.4] sm:whitespace-pre-line">
+                    {featuredMember.quote.replace(/\n/g, ' ')}
+                  </Text>
+                </View>
+                <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
               </View>
             </div>
           </View>
 
-          {/* 副会长 (部分展示) */}
+          {/* 副会长 (部分展示) - Full-width company & tags so nothing is squeezed */}
           <View>
             <View className="flex items-center justify-between mb-2.5">
               <View className="flex items-center gap-1.5">
@@ -406,48 +412,51 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
               </button>
             </View>
 
-            <View className="grid grid-cols-3 gap-2">
+            <View className="grid grid-cols-3 gap-1.5 sm:gap-2">
               {vicePresidents.map((vp) => (
                 <div
                   key={vp.id}
                   onClick={() => onSelectMember(vp)}
-                  className="p-2 rounded-xl border border-slate-100 bg-[#FAFBFD] hover:border-blue-200 transition cursor-pointer flex flex-col justify-between"
+                  className="p-1.5 sm:p-2 rounded-xl border border-slate-100 bg-[#FAFBFD] hover:border-blue-200 transition cursor-pointer flex flex-col justify-between"
                 >
-                  <View className="flex items-start gap-2">
-                    <View className="w-11 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                      <Image
-                        src={vp.avatar}
-                        alt={vp.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </View>
-                    <View className="flex-1 min-w-0">
-                      <View className="flex items-center gap-1 flex-wrap">
-                        <Text className="text-[13px] font-bold text-slate-900">
+                  <View>
+                    {/* Top Row: Portrait + Name + Role Badge */}
+                    <View className="flex items-center gap-1.5">
+                      <View className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                        <Image
+                          src={vp.avatar}
+                          alt={vp.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </View>
+                      <View className="flex flex-col min-w-0">
+                        <Text className="text-[12px] sm:text-[13px] font-bold text-slate-900 whitespace-nowrap truncate">
                           {vp.name}
                         </Text>
-                        <span className="px-1 py-0.5 rounded bg-[#FDF1D6] text-[#9A6418] text-[9px] font-medium flex items-center gap-0.5">
-                          <Crown className="w-2.5 h-2.5 text-[#D99B43] fill-[#EAB664]" />
+                        <span className="mt-0.5 self-start px-1 py-0.5 rounded bg-[#FDF1D6] text-[#9A6418] text-[8.5px] sm:text-[9px] font-medium flex items-center gap-0.5 whitespace-nowrap">
+                          <Crown className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-[#D99B43] fill-[#EAB664]" />
                           副会长
                         </span>
                       </View>
-                      <Text className="mt-1 block text-[10px] text-slate-500 truncate">
-                        {vp.company}
+                    </View>
+
+                    {/* Full-Width Company & Position */}
+                    <Text className="mt-1.5 block text-[10px] sm:text-[10.5px] font-medium text-slate-700 truncate">
+                      {vp.company}
+                    </Text>
+                    <View className="mt-0.5 flex items-center justify-between">
+                      <Text className="text-[9.5px] sm:text-[10px] text-slate-500 truncate">
+                        {vp.position}
                       </Text>
-                      <View className="flex items-center justify-between">
-                        <Text className="text-[10px] text-slate-500 truncate">
-                          {vp.position}
-                        </Text>
-                        <ChevronRight className="w-3 h-3 text-slate-400 shrink-0" />
-                      </View>
+                      <ChevronRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-slate-400 shrink-0" />
                     </View>
                   </View>
 
-                  <View className="mt-2 flex items-center gap-1">
-                    <span className="px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[9.5px]">
+                  <View className="mt-1.5 flex items-center gap-1 flex-nowrap overflow-hidden">
+                    <span className="px-1 sm:px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[8.5px] sm:text-[9.5px] whitespace-nowrap shrink-0">
                       {vp.industry}
                     </span>
-                    <span className="px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[9.5px]">
+                    <span className="px-1 sm:px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[8.5px] sm:text-[9.5px] whitespace-nowrap shrink-0">
                       {vp.city}
                     </span>
                   </View>
@@ -456,7 +465,7 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
             </View>
           </View>
 
-          {/* 理事 (部分展示) */}
+          {/* 理事 (部分展示) - Full-width company & tags so nothing is squeezed */}
           <View>
             <View className="flex items-center justify-between mb-2.5">
               <View className="flex items-center gap-1.5">
@@ -476,47 +485,48 @@ export const OrgStructurePage: React.FC<OrgStructurePageProps> = ({
               </button>
             </View>
 
-            <View className="grid grid-cols-3 gap-2">
+            <View className="grid grid-cols-3 gap-1.5 sm:gap-2">
               {directors.map((dir) => (
                 <div
                   key={dir.id}
                   onClick={() => onSelectMember(dir)}
-                  className="p-2 rounded-xl border border-slate-100 bg-[#FAFBFD] hover:border-blue-200 transition cursor-pointer flex flex-col justify-between"
+                  className="p-1.5 sm:p-2 rounded-xl border border-slate-100 bg-[#FAFBFD] hover:border-blue-200 transition cursor-pointer flex flex-col justify-between"
                 >
-                  <View className="flex items-start gap-2">
-                    <View className="w-11 h-12 rounded-lg overflow-hidden shrink-0 bg-slate-200">
-                      <Image
-                        src={dir.avatar}
-                        alt={dir.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </View>
-                    <View className="flex-1 min-w-0">
-                      <View className="flex items-center gap-1 flex-wrap">
-                        <Text className="text-[13px] font-bold text-slate-900">
+                  <View>
+                    <View className="flex items-center gap-1.5">
+                      <View className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg overflow-hidden shrink-0 bg-slate-200">
+                        <Image
+                          src={dir.avatar}
+                          alt={dir.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </View>
+                      <View className="flex flex-col min-w-0">
+                        <Text className="text-[12px] sm:text-[13px] font-bold text-slate-900 whitespace-nowrap truncate">
                           {dir.name}
                         </Text>
-                        <span className="px-1.5 py-0.5 rounded bg-[#E6F0FD] text-[#1D54A6] text-[9px] font-medium">
+                        <span className="mt-0.5 self-start px-1.5 py-0.5 rounded bg-[#E6F0FD] text-[#1D54A6] text-[8.5px] sm:text-[9px] font-medium whitespace-nowrap">
                           理事
                         </span>
                       </View>
-                      <Text className="mt-1 block text-[10px] text-slate-500 truncate">
-                        {dir.company}
+                    </View>
+
+                    <Text className="mt-1.5 block text-[10px] sm:text-[10.5px] font-medium text-slate-700 truncate">
+                      {dir.company}
+                    </Text>
+                    <View className="mt-0.5 flex items-center justify-between">
+                      <Text className="text-[9.5px] sm:text-[10px] text-slate-500 truncate">
+                        {dir.position}
                       </Text>
-                      <View className="flex items-center justify-between">
-                        <Text className="text-[10px] text-slate-500 truncate">
-                          {dir.position}
-                        </Text>
-                        <ChevronRight className="w-3 h-3 text-slate-400 shrink-0" />
-                      </View>
+                      <ChevronRight className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-slate-400 shrink-0" />
                     </View>
                   </View>
 
-                  <View className="mt-2 flex items-center gap-1">
-                    <span className="px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[9.5px]">
+                  <View className="mt-1.5 flex items-center gap-1 flex-nowrap overflow-hidden">
+                    <span className="px-1 sm:px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[8.5px] sm:text-[9.5px] whitespace-nowrap shrink-0">
                       {dir.industry}
                     </span>
-                    <span className="px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[9.5px]">
+                    <span className="px-1 sm:px-1.5 py-0.5 rounded bg-[#EBF3FE] text-[#25599C] text-[8.5px] sm:text-[9.5px] whitespace-nowrap shrink-0">
                       {dir.city}
                     </span>
                   </View>
